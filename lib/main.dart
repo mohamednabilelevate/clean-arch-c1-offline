@@ -7,6 +7,6 @@ void main()async{
 
   // new Line
   runApp(MaterialApp(
-    home: Loginscreen(),
+    home: LoginScreen(),
   ));
 }

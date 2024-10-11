@@ -18,7 +18,7 @@ class Loginscreen extends StatelessWidget {
         body: Column(
           children: [
             
-            BlocConsumer<LoginViewModel,LoginScreenState>(
+            BlocConsumer<LoginScreenState>(
               listenWhen: (previous, current) {
                 if(previous is LoadingState || previous is ErrorState){
                   Navigator.pop(context);
@@ -80,7 +80,7 @@ class Loginscreen extends StatelessWidget {
                   default:{
                     return LoginForm(
                         (){
-                          viewModel.doAction(LoginAction("email@elevate.com", "123456"));
+                          viewModel.doIntent(LoginAction("email@elevate.com", "123456"));
                         }
                     );
                   }

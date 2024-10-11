@@ -6,6 +6,6 @@ void main()async{
   configureDependencies();
 
   runApp(MaterialApp(
-    home: Loginscreen(),
+    home: LoginScreen(),
   ));
 }

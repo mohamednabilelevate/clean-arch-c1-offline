@@ -6,8 +6,8 @@ import 'package:elevate_online_exam_c1_offline/presentation/ui/login/LoginViewMo
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class Loginscreen extends StatelessWidget {
-  Loginscreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
 
   LoginViewModel viewModel = getIt.get<LoginViewModel>();
   @override
@@ -80,7 +80,7 @@ class Loginscreen extends StatelessWidget {
                   default:{
                     return LoginForm(
                         (){
-                          viewModel.doAction(LoginAction("email@elevate.com", "123456"));
+                          viewModel.add(LoginEvent("email@elevate.com", "123456"));
                         }
                     );
                   }

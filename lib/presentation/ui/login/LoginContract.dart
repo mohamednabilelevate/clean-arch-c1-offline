@@ -1,11 +1,11 @@
 
 import 'package:elevate_online_exam_c1_offline/domain/AppUser.dart';
 
-sealed class Action{}
-class LoginAction extends Action{
+sealed class LoginScreenEvent{}
+class LoginEvent extends LoginScreenEvent{
   String email;
   String password;
-  LoginAction(this.email,this.password);
+  LoginEvent(this.email,this.password);
 }
 
 sealed class LoginScreenState{}
